@@ -1,8 +1,8 @@
 package CarbonFootprintInterface;
 
-public class Car implements CarbonFootprint{
+public class Car implements CarbonFootprint {
 
-    private  String model;
+    private String model;
     private double litresOfFuel;
     private double kilogramsOfCO2; // kilograms of CO2 per litre
     private int year;
@@ -48,6 +48,16 @@ public class Car implements CarbonFootprint{
 
     @Override
     public double getCarbonFootprint() {
-        return getLitresOfFuel()*getKilogramsOfCO2();
+        return getLitresOfFuel() * getKilogramsOfCO2();
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model=" + model +
+                ", litresOfFuel=" + litresOfFuel +
+                ", kilogramsOfCO2=" + kilogramsOfCO2 +
+                ", year=" + year +
+                '}';
     }
 }
